@@ -1,0 +1,11 @@
+<div *ngIf="films"  fxLayout="column" fxLayoutAlign="space-around center" >
+    <h1>Star Wars</h1>
+    <img height="600px"
+        src="https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+        alt="new hope poster">
+    <h4>{{ films.title }}</h4>
+    <p style="width: 600px;">{{ films.opening_crawl }}</p>
+    <h4>{{ films.director }}</h4>
+    <h4>{{ films.producer }}</h4>
+    <h4>{{ films.release_date }}</h4>
+</div>
