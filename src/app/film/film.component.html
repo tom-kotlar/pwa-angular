@@ -10,4 +10,10 @@
     <h4>{{ films.release_date }}</h4>
 </div>
 
-<ng-template #noData>No Data Available...</ng-template>
+
+<ng-template #noData > 
+    <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="80px" style="margin-top: 80px;">
+    <h2>No Data Available... </h2>
+    <mat-spinner></mat-spinner>
+</div> 
+</ng-template>

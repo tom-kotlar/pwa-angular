@@ -31,8 +31,7 @@ interface Films {
 export class FilmComponent implements OnInit {
 
   films$: Observable<Films>;
-
-
+  
   private starWarsUrl = "https://swapi.dev/api/films/1"
 
   constructor(private http: HttpClient) { }
