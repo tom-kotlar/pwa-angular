@@ -1,1 +1,15 @@
-<app-film></app-film>
+<mat-toolbar>
+  <img routerLink="/" width="80" alt="Star_Wars-Logo"
+    src="https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png" />
+
+  <a mat-button routerLink="/" fxHide.xs>
+    <h1>PWA Angular </h1>
+  </a>
+
+  <span class="example-spacer"></span>
+
+  <a mat-button routerLink="films">Films</a>
+  <a mat-button routerLink="characters">Characters</a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
