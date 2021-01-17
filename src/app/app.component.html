@@ -10,6 +10,17 @@
 
   <a mat-button routerLink="films">Films</a>
   <a mat-button routerLink="characters">Characters</a>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>update</mat-icon>
+      <span>Version 5</span>
+    </button>
+
+  </mat-menu>
 </mat-toolbar>
+
 
 <router-outlet></router-outlet>
