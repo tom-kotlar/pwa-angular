@@ -1,90 +1,126 @@
 
 
-export const LESSONS = {
-
+export const FILMS = {
     1: {
         id: 1,
-        "description": "Angular Tutorial For Beginners - Build Your First App - Hello World Step By Step",
-        "longDescription": "<p>This is step by step guide to create your first  application. <b>Its aimed at beginners</b> just starting out with the framework.This lesson will show how to create a component, and how to link the component to a given custom HTML tag. It will show how to give the component a given template.</p>",
-        "tags": "BEGINNER",
-        "duration": "4:17",
-        "url": "https://www.youtube.com/watch?v=LVrF-aQ6NxQ",
-        "videoUrl": "https://www.youtube.com/embed/du6sKwEFrhQ"
+        "story": "Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi set out to stop the Trade Federation from invading Naboo. While travelling, they come across a gifted boy, Anakin, and learn that the Sith have returned.",
+        "title": "EPISODE I",
+        "name": "The Phantom Menace",
+        "year": "1999",
+        "duration": "2h 16m",
+        "poster": "/assets/images/the-phantom-menace.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-i-the-phantom-menace",
+        "trailer": "https://youtu.be/bD7bpG-zDJQ"
     },
     2: {
         id: 2,
-        "description": "Building Your First  Component - Component Composition",
-        "duration": "2:07",
-        "longDescription": "<p>In this lesson we are going to see how to include a component inside another component. We are going to create a simple search box component and include it in our main application.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-build-your-first-component",
-        "videoUrl": "https://www.youtube.com/embed/VES1eTNxi1s"
+        "story": "While pursuing an assassin, Obi Wan uncovers a sinister plot to destroy the Republic. With the fate of the galaxy hanging in the balance, the Jedi must defend the galaxy against the evil Sith.",
+        "title": "EPISODE II",
+        "name": "Attack of the Clones",
+        "year": "2002",
+        "duration": "2h 22m",
+        "poster": "/assets/images/attack-of-the-clones.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-ii-attack-of-the-clones",
+        "trailer": "https://youtu.be/gYbW1F_c9eM"
     },
     3: {
         id: 3,
-        "description": "Component @Input - How To Pass Input Data To an  Component",
-        "duration": "2:33",
-        "longDescription": "<p>In this lesson we are going to learn how to use the  template syntax for properties, and learn how we can use it to pass input data to a component. We are going to see also a simplified input syntax for passing constant strings as component inputs.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-passing-data-to-component-using-input",
-        "videoUrl": "https://www.youtube.com/embed/Yfebo2mFrTU"
+        "story": "Anakin joins forces with Obi-Wan and sets Palpatine free from the evil clutches of Count Doku. However, he falls prey to Palpatine and the Jedis' mind games and gives into temptation.",
+        "title": "EPISODE III",
+        "name": "Revenge of the Sith",
+        "year": "2005",
+        "duration": "2h 22m",
+        "poster": "/assets/images/revenge-of-the-sith.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith",
+        "trailer": "https://youtu.be/5UnjrG_N8hU"
     },
     4: {
         id: 4,
-        "description": " Component Events - Using @Output to create custom events",
-        "duration": "4:44",
-        "longDescription": "<p>In this lesson we are going to see how components can emit custom events via EventEmitter and the @Output decorator. We are going to see how we can subscribe to standard browser events, and how the syntax for that is exactly the same as in the case of custom component events. We will also learn how Typescript literals can be used to output variables inside template strings.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-component-events",
-        "videoUrl": "https://www.youtube.com/embed/dgyVrJ2XCq4"
+        "story": "In a galaxy where hyperfuel is in high demand, Han Solo gets involved in a large-scale heist within the criminal underworld and meets individuals who change his life.",
+        "title": "A Star Wars Story",
+        "name": "Solo",
+        "year": "2018",
+        "duration": "2h 15m",
+        "poster": "/assets/images/solo.png",
+        "info": "https://www.starwars.com/films/solo",
+        "trailer": "https://youtu.be/dNW0B0HsvVs"
     },
     5: {
         id: 5,
-        "description": " Component Templates - Inline Vs External",
-        "duration": "2:55",
-        "longDescription": "<p>In this lesson we are going to learn how a component template can be defined both inline and in an external file. We are going to learn how to configure the component so that Angular can find the template at the correct location, using the module commonjs variable. We are going to learn also some best practices for component naming, from the official  Style Guide.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-component-templates-internal-vs-external"
+        "story": "Jyn's father is forcibly taken by the Galactic Empire to help them complete the Death Star. When she grows up, she joins a group of resistance fighters who aim to steal the Empire's blueprints.",
+        "title": "A Star Wars Story",
+        "name": "Rogue One",
+        "year": "2016",
+        "duration": "2h 13m",
+        "poster": "/assets/images/rogue-one.png",
+        "info": "https://www.starwars.com/films/rogue-one",
+        "trailer": "https://youtu.be/sC9abcLLQpI"
     },
     6: {
         id: 6,
-        "description": "Styling  Components - Learn About Component Style Isolation",
-        "duration": "3:27",
-        "longDescription": "<p>In this lesson we are going to learn how components can be styled using both inline styles and an external css file. We will learn some more best practices on file naming. We will learn how the mechanism for style isolation works in.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-components-styling-component-isolation"
+        "story": "After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.",
+        "title": "Episode IV",
+        "name": "A New Hope",
+        "year": "1977",
+        "duration": "2h 5m",
+        "poster": "/assets/images/new.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-iv-a-new-hope",
+        "trailer": "https://youtu.be/vZ734NWnAHA"
     },
     7: {
         id: 7,
-        "description": " Component Interaction - Extended Components Example",
-        "duration": "9:22",
-        "longDescription": "<p>In this lesson we are going to put together all that we have learned so far about components to create a more complex example. We are going to create two components: a color picker and a color previewer and see how they can interact.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-components-component-interaction"
+        "story": "Darth Vader is adamant about turning Luke Skywalker to the dark side. Master Yoda trains Luke to become a Jedi Knight while his friends try to fend off the Imperial fleet.",
+        "title": "Episode V",
+        "name": "The Empire Strikes Back",
+        "year": "1980",
+        "duration": "2h 7m",
+        "poster": "/assets/images/empire-strikes-back.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-v-the-empire-strikes-back",
+        "trailer": "https://youtu.be/JNwNXF9Y6kY"
     },
     8: {
         id: 8,
-        "description": " Components Tutorial For Beginners - Components Exercise !",
-        "duration": "1:26",
-        "longDescription": "<p>In this video we are going to present an exercise for putting in practice the several concepts that we have learned so far about components.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-components-exercise"
+        "story": "Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.",
+        "title": "Episode VI",
+        "name": "The Return of the Jedi",
+        "year": "1983",
+        "duration": "2h 16m",
+        "poster": "/assets/images/return-of-the-jedi.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-vi-return-of-the-jedi",
+        "trailer": "https://youtu.be/5UfA_aKBGMc"
     },
     9: {
         id: 9,
-        "description": " Components Tutorial For Beginners - Components Exercise Solution Inside",
-        "duration": "2:08",
-        "longDescription": "<p>This video contains the solution for the introduction to components exercise.</p>",
-        "tags": "BEGINNER",
-        "url": "angular2-components-exercise-solution"
+        "story": "A new order threatens to destroy the New Republic. Finn, Rey and Poe, backed by the Resistance and the Republic, must find a way to stop them and find Luke, the last surviving Jedi.",
+        "title": "Episode VII",
+        "name": "The Force Awakens",
+        "year": "2015",
+        "duration": "2h 15m",
+        "poster": "/assets/images/the-force-awakens.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-vii-the-force-awakens",
+        "trailer": "https://youtu.be/sGbxmsDFVnE"
     },
     10: {
         id: 10,
-        "description": " Directives - Inputs, Output Event Emitters and How To Export Template References",
-        "duration": "4:01",
-        "longDescription": "<p>Components are actually simply just Directives. All the functionality that we have learned so far about Components also applies to Directives. In this lesson we are going to learn how to Directives can also have inputs and outputs, and how the use of the decorators @Input and @Output also applies to directives. We are also learn a new functionality for exporting a template reference for the directive itself into the template on which the directive is being used.</p> ",
-        "tags": "BEGINNER",
-        "url": "angular2-directives-inputs-outputs-event-emitters"
-    }
+        "story": "Rey seeks to learn the ways of the Jedi under Luke Skywalker, its remaining member, to reinvigorate the Resistance's war against the First Order.",
+        "title": "Episode VIII",
+        "name": "The Last Jedi",
+        "year": "2017",
+        "duration": "2h 32m",
+        "poster": "/assets/images/the-last-jedi.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi",
+        "trailer": "https://youtu.be/Q0CbN8sfihY"
+    },
+    11: {
+        id: 11,
+        "story": "The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.",
+        "title": "Episode IX",
+        "name": "The Rise of Skywalker",
+        "year": "2019",
+        "duration": "2h 22m",
+        "poster": "/assets/images/rise-of-skywalker.png",
+        "info": "https://www.starwars.com/films/star-wars-episode-ix-the-rise-of-skywalker",
+        "trailer": "https://youtu.be/adzYW5DZoWs"
+    },
 
-};
+}

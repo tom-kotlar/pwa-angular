@@ -1,12 +1,12 @@
 
 import * as _ from 'lodash';
-import {LESSONS} from "./database-data";
+import {FILMS} from "./database-data";
 
 
 class InMemoryDatabase {
 
-    readAllLessons() {
-        return _.values(LESSONS);
+    readAllFilms() {
+        return _.values(FILMS);
     }
 
 }
