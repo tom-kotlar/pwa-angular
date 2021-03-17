@@ -1,7 +1,7 @@
 
 import * as express from 'express';
 import {Application} from "express";
-import {readAllLessons} from "./read-all-lessons.route";
+import {readAllFilms} from "./read-all-films.route";
 import {addPushSubscriber} from "./add-push-subscriber.route";
 import {sendNewsletter} from "./send-newsletter.route";
 const bodyParser = require('body-parser');
@@ -30,8 +30,8 @@ app.use(bodyParser.json());
 
 
 // REST API
-app.route('/api/lessons')
-    .get(readAllLessons);
+app.route('/api/films')
+    .get(readAllFilms);
 
 app.route('/api/notifications')
     .post(addPushSubscriber);
