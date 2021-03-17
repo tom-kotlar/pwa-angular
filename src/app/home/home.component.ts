@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {catchError} from 'rxjs/operators';
+import {Films} from "../model/films";
 import { SwPush } from '@angular/service-worker';
 import { NewslaterService } from "../services/newslater.service";
+import { FilmsService } from "../services/films.service";
 
 @Component({
   selector: 'app-home',
@@ -12,13 +16,20 @@ export class HomeComponent implements OnInit {
   readonly VAPID_PUBLIC_KEY = 'BO2LO73vl7KzPHoGTDkOYeSLXZIAi78jVff5vG5QSK31PJjeDj06GK8LwzIH7Du_ESa9Ya0Xg_QAN4RA9ZSFCMw'
 
   sub: PushSubscription
+  films$: Observable<Films[]>;
 
-  constructor(private swPush: SwPush, private newsLetter: NewslaterService) { }
+  constructor(private swPush: SwPush, private newsLetter: NewslaterService, private filmsService: FilmsService) { }
 
   ngOnInit(): void {
+    this.loadFilms()
   }
 
 
+
+
+  loadFilms() {
+    this.films$ = this.filmsService.loadAllLessons().pipe(catchError(err => of([])));
+}
 
   subscribeToNotifications() {
     this.swPush.requestSubscription({

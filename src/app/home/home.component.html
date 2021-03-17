@@ -1,51 +1,27 @@
 
-<div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center center" fxLayoutGap.gt-md="5px"
+<div fxLayout="row"  fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px"
     style="margin-top: 10px;">
     <button mat-raised-button (click)="subscribeToNotifications()" [disabled]='sub'>Subscribe</button>
     <button mat-raised-button (click)="sendNewsletter()">Send</button>
 </div>
 
-<div class="home" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center center" fxLayoutGap.gt-md="20px">
+<div class="home" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5px" fxLayoutGap.gt-md="10px" >
 
-    <mat-card class="example-card">
-        <img mat-card-image class="image-1"
-            src="https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"
-            alt="Image Episode One">
+    <mat-card class="example-card mat-elevation-z2"  *ngFor="let film of films$ | async"  >
+        <img src="{{film.poster}}"  width="400">
         <mat-card-content>
         </mat-card-content>
         <mat-card-header>
             <div mat-card-avatar class="image-logo"></div>
-            <mat-card-title>EPISODE I</mat-card-title>
-            <mat-card-subtitle>The Phantom Menace</mat-card-subtitle>
+            <mat-card-title>{{film.title}}</mat-card-title>
+            <mat-card-subtitle>{{film.name}}</mat-card-subtitle>
         </mat-card-header>
     </mat-card>
 
 
-    <mat-card class="example-card">
-        <img mat-card-image class="image-2"
-            src="https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg"
-            alt="Image Episode Two">
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-header>
-            <div mat-card-avatar class="image-logo"></div>
-            <mat-card-title>EPISODE II</mat-card-title>
-            <mat-card-subtitle>Attack of the clones</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
+    
 
 
 
-    <mat-card class="example-card">
-        <img mat-card-image class="image-3"
-            src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_.jpg"
-            alt="Image Episode Three">
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-header>
-            <div mat-card-avatar class="image-logo"></div>
-            <mat-card-title>EPISODE III</mat-card-title>
-            <mat-card-subtitle>Revenge of the Sith</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
+   
 </div>
