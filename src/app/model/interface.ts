@@ -1,4 +1,4 @@
-export interface Films {
+export interface Movie {
     story: string;
     title: string;
     name: string;

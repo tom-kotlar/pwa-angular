@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Films } from '../model/films';
 import { SwPush } from '@angular/service-worker';
 import { NewslaterService } from '../services/newslater.service';
 import { FilmsService } from '../services/films.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Movie } from '../model/interface';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class MoviesComponent implements OnInit {
   'BO2LO73vl7KzPHoGTDkOYeSLXZIAi78jVff5vG5QSK31PJjeDj06GK8LwzIH7Du_ESa9Ya0Xg_QAN4RA9ZSFCMw';
 
 sub: PushSubscription;
-films$: Observable<Films[]>;
+films$: Observable<Movie[]>;
 
 isWideScreen$: Observable<boolean>;
 
