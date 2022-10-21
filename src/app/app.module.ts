@@ -7,42 +7,30 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatIconModule } from '@angular/material/icon'
-import { MatButtonModule } from '@angular/material/button';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatCardModule } from '@angular/material/card'
-import { MatMenuModule } from '@angular/material/menu';
+;
 
 import { HomeComponent } from './home/home.component'
 import { FilmComponent } from './film/film.component';
+import { MaterialModule } from './shared/material.module';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmComponent,
-    HomeComponent
+    HomeComponent,
+    MoviesComponent
   ],
   imports: [
     AppRoutingModule,
     RouterModule,
     BrowserModule,
     HttpClientModule,
-    FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    MatMenuModule,
-
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
