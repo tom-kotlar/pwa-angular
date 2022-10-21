@@ -7,7 +7,8 @@ import { SwUpdate } from "@angular/service-worker";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+  links = ['home', 'movies', 'series', 'comics', 'characters'];
+  titles = ['Home', 'Movies', 'Series', 'Comics', 'Characters'];
 
   constructor(private swUpdate: SwUpdate) { }
 

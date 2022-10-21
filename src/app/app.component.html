@@ -1,26 +1,77 @@
-<mat-toolbar>
-  <img routerLink="/" width="80" alt="Star_Wars-Logo"
-    src="https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png" />
+<mat-toolbar role="toolbar" color="" class="mat-elevation-z4">
 
-  <a mat-button routerLink="/" fxHide.xs>
-    <h1>PWA Angular </h1>
-  </a>
+  <div fxFlex>
+    <img routerLink="home" width="80" alt="Star_Wars-Logo"
+      src="https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png" />
+  </div>
 
-  <span class="example-spacer"></span>
+  <div fxFlex fxShow="true" fxHide.lt-sm fxLayoutAlign="center center">
+    <a mat-button class="nav-links" routerLink="movies" routerLinkActive="active-link">Movies</a>
+    <a mat-button class="nav-links" routerLink="series" routerLinkActive="active-link">Series</a>
+    <a mat-button class="nav-links" routerLink="comics" routerLinkActive="active-link">Comics</a>
+    <a mat-button class="nav-links" routerLink="characters" routerLinkActive="active-link">Characters</a>
+  </div>
 
-  <a mat-button routerLink="films">Films</a>
-  <a mat-button routerLink="characters">Characters</a>
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>update</mat-icon>
-      <span>Version 6</span>
+
+  <div fxFlex fxLayoutAlign="flex-end center">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
     </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item>
+        <mat-icon color="primary">account_circle</mat-icon>
+        <span>Person</span>
+      </button>
 
-  </mat-menu>
+      <button mat-menu-item>
+        <mat-icon color="primary">email</mat-icon>
+        <span>test@test.com</span>
+      </button>
+
+
+      <mat-divider></mat-divider>
+
+      <button mat-menu-item>
+        <mat-icon color="primary">logout</mat-icon>
+        <a href="" style="text-decoration: none !important">
+          <span> Log Out </span>
+        </a>
+      </button>
+
+      <mat-divider></mat-divider>
+      <button mat-menu-item>
+        <mat-icon color="primary">edit</mat-icon>
+        <a href="" style="text-decoration: none !important">
+          <span> Edit Profile </span>
+        </a>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-menu-item>
+        <mat-icon color="primary">phone_iphone</mat-icon>
+        <span>Version: 0.0.0</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon color="primary">cloud_upload</mat-icon>
+        <span>Release: 0.0.0 </span>
+      </button>
+
+    </mat-menu>
+
+  </div>
+
 </mat-toolbar>
+
+
+<nav mat-tab-nav-bar fxHide.sm fxHide.md fxHide.lg >
+  <a mat-tab-link *ngFor="let link of links; let i = index" routerLink="{{ link }}" routerLinkActive="active"
+    #rla="routerLinkActive" [active]="rla.isActive">
+    {{ titles[i] }}
+  </a>
+</nav>
+
 
 
 <router-outlet></router-outlet>
