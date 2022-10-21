@@ -1,16 +1,5 @@
-.home {
-  margin-top: 30px;
-  
-}
-
-
-
-.example-card {
-  max-width: 500px;
-  margin-bottom: 10px;
-}
-
-.image-logo {
-  background-image: url("https://cdn.freebiesupply.com/logos/large/2x/star-wars-logo-black-and-white.png");
-  background-size: cover;
+@media only screen and (max-width: 600px) {
+  .poster-width {
+      width: 380px;
+  }
 }

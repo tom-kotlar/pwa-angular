@@ -1,27 +1,5 @@
-
-<div fxLayout="row"  fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px"
-    style="margin-top: 10px;">
-    <button mat-raised-button (click)="subscribeToNotifications()" [disabled]='sub'>Subscribe</button>
-    <button mat-raised-button (click)="sendNewsletter()">Send</button>
-</div>
-
-<div class="home" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5px" fxLayoutGap.gt-md="10px" >
-
-    <mat-card class="example-card mat-elevation-z2"  *ngFor="let film of films$ | async"  >
-        <img src="{{film.poster}}"  width="400">
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-header>
-            <div mat-card-avatar class="image-logo"></div>
-            <mat-card-title>{{film.title}}</mat-card-title>
-            <mat-card-subtitle>{{film.name}}</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
-
-
-    
-
-
-
-   
+<div fxLayout="column" fxLayoutAlign="center center" style="padding-top: 60px">
+    <img src="https://media.tenor.com/L60s9x5LqsMAAAAC/star-wars-lightsaber.gif" width="70%"
+        alt="Mandalorian Starwars Intro" class="poster-width" />
+    <a href="https://tenor.com/users/pushlint" style="text-decoration: none">Credits</a>
 </div>
