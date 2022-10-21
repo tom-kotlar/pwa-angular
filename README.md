@@ -1,4 +1,4 @@
-# Pwa Angular - Star Wars
+# Star Wars
 
 :tv: [Angular Service Worker Tutorial](https://youtu.be/5YtNQJQu31Y)
 
