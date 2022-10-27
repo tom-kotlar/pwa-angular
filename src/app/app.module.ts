@@ -15,13 +15,18 @@ import { HomeComponent } from './home/home.component'
 import { FilmComponent } from './film/film.component';
 import { MaterialModule } from './shared/material.module';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movie/movie.component';
+import { NotFoundComponent } from './shared/not-found.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieComponent, 
+    NotFoundComponent
   ],
   imports: [
     AppRoutingModule,
