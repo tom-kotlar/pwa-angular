@@ -17,6 +17,7 @@ import { MaterialModule } from './shared/material.module';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movie/movie.component';
 import { NotFoundComponent } from './shared/not-found.component';
+import { SanitizerPipe } from './sanitizer.pipe';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { NotFoundComponent } from './shared/not-found.component';
     HomeComponent,
     MoviesComponent,
     MovieComponent, 
-    NotFoundComponent
+    NotFoundComponent, SanitizerPipe
   ],
   imports: [
     AppRoutingModule,
