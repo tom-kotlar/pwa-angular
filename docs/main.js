@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkpwa_angular"] = self["webpackChunkpwa_angular"] || []).push([["main"],{
 
-/***/ 809:
+/***/ 158:
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
@@ -12,11 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AppRoutingModule": () => (/* binding */ AppRoutingModule)
 /* harmony export */ });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _film_film_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./film/film.component */ 1796);
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home/home.component */ 7205);
-/* harmony import */ var _movies_movies_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./movies/movies.component */ 9991);
-/* harmony import */ var _shared_not_found_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/not-found.component */ 8558);
-/* harmony import */ var _movie_movie_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./movie/movie.component */ 8865);
+/* harmony import */ var _film_film_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./film/film.component */ 5789);
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home/home.component */ 5067);
+/* harmony import */ var _movies_movies_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./movies/movies.component */ 2287);
+/* harmony import */ var _shared_not_found_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/not-found.component */ 87);
+/* harmony import */ var _movie_movie_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./movie/movie.component */ 5698);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -44,7 +44,7 @@ AppRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_5_
 
 /***/ }),
 
-/***/ 721:
+/***/ 5041:
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
   \**********************************/
@@ -189,7 +189,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
 
 /***/ }),
 
-/***/ 23:
+/***/ 6747:
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
@@ -200,19 +200,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AppModule": () => (/* binding */ AppModule)
 /* harmony export */ });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser */ 4497);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 721);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 809);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 5041);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 158);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ 8987);
 /* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/service-worker */ 3769);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ 4766);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ 2340);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ 7146);
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ 7205);
-/* harmony import */ var _film_film_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./film/film.component */ 1796);
-/* harmony import */ var _shared_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/material.module */ 4160);
-/* harmony import */ var _movies_movies_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./movies/movies.component */ 9991);
-/* harmony import */ var _movie_movie_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./movie/movie.component */ 8865);
-/* harmony import */ var _shared_not_found_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/not-found.component */ 8558);
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ 5067);
+/* harmony import */ var _film_film_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./film/film.component */ 5789);
+/* harmony import */ var _shared_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/material.module */ 4872);
+/* harmony import */ var _movies_movies_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./movies/movies.component */ 2287);
+/* harmony import */ var _movie_movie_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./movie/movie.component */ 5698);
+/* harmony import */ var _shared_not_found_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/not-found.component */ 87);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -256,7 +256,7 @@ AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵ
 
 /***/ }),
 
-/***/ 1796:
+/***/ 5789:
 /*!****************************************!*\
   !*** ./src/app/film/film.component.ts ***!
   \****************************************/
@@ -268,7 +268,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 8987);
-/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/films.service */ 7767);
+/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/films.service */ 3166);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4666);
 
 
@@ -322,7 +322,7 @@ FilmComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 
 /***/ }),
 
-/***/ 7205:
+/***/ 5067:
 /*!****************************************!*\
   !*** ./src/app/home/home.component.ts ***!
   \****************************************/
@@ -351,7 +351,7 @@ HomeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["
 
 /***/ }),
 
-/***/ 8865:
+/***/ 5698:
 /*!******************************************!*\
   !*** ./src/app/movie/movie.component.ts ***!
   \******************************************/
@@ -364,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 4139);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8987);
-/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/films.service */ 7767);
+/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/films.service */ 3166);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/progress-spinner */ 1708);
 /* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/flex-layout/flex */ 6722);
@@ -440,7 +440,7 @@ MovieComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__[
 
 /***/ }),
 
-/***/ 9991:
+/***/ 2287:
 /*!********************************************!*\
   !*** ./src/app/movies/movies.component.ts ***!
   \********************************************/
@@ -456,8 +456,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/layout */ 3278);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/service-worker */ 3769);
-/* harmony import */ var _services_newslater_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/newslater.service */ 9161);
-/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/films.service */ 7767);
+/* harmony import */ var _services_newslater_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/newslater.service */ 3176);
+/* harmony import */ var _services_films_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/films.service */ 3166);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/button */ 4522);
@@ -612,7 +612,7 @@ MoviesComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__[
 
 /***/ }),
 
-/***/ 7767:
+/***/ 3166:
 /*!*******************************************!*\
   !*** ./src/app/services/films.service.ts ***!
   \*******************************************/
@@ -622,25 +622,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FilmsService": () => (/* binding */ FilmsService)
 /* harmony export */ });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 6942);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ 8759);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 8759);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ 6942);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8987);
 
 
 
+// https://poducts.blob.core.windows.net/star-wars/FILMS
 class FilmsService {
     constructor(http) {
         this.http = http;
         this.wikiURL = "https://en.wikipedia.org/w/api.php";
     }
     loadAllLessons() {
-        return this.http.get('/api/films')
-            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)(res => res.lessons));
+        return this.http.get('https://azure-storage-api.azurewebsites.net/api/blob/FILMS')
+            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.tap)(data => console.log(data, "--->")));
     }
     findLessonById(id) {
         return this.http.get('/api/films/')
-            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.tap)(data => console.log(data.lessons, id)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)(data => data.lessons.filter(data => data.id === id)));
+            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.tap)(data => console.log(data.lessons, id)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.map)(data => data.lessons.filter(data => data.id === id)));
     }
     wikimedia(searText) {
         return this.http.get(this.wikiURL, {
@@ -661,7 +662,7 @@ FilmsService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["
 
 /***/ }),
 
-/***/ 9161:
+/***/ 3176:
 /*!***********************************************!*\
   !*** ./src/app/services/newslater.service.ts ***!
   \***********************************************/
@@ -692,7 +693,7 @@ NewslaterService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0
 
 /***/ }),
 
-/***/ 4160:
+/***/ 4872:
 /*!*******************************************!*\
   !*** ./src/app/shared/material.module.ts ***!
   \*******************************************/
@@ -877,7 +878,7 @@ MaterialModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__[
 
 /***/ }),
 
-/***/ 8558:
+/***/ 87:
 /*!***********************************************!*\
   !*** ./src/app/shared/not-found.component.ts ***!
   \***********************************************/
@@ -909,7 +910,7 @@ NotFoundComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0
 
 /***/ }),
 
-/***/ 4766:
+/***/ 2340:
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
   \*****************************************/
@@ -937,7 +938,7 @@ const environment = {
 
 /***/ }),
 
-/***/ 8835:
+/***/ 4431:
 /*!*********************!*\
   !*** ./src/main.ts ***!
   \*********************/
@@ -946,8 +947,8 @@ const environment = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ 4497);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 23);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ 4766);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 6747);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ 2340);
 
 
 
@@ -964,7 +965,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__.platformBrowser().bootstr
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(8835)));
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(4431)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
