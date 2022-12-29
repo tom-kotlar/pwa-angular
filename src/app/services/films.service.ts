@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { map, tap } from 'rxjs/operators';
+import { map, shareReplay, tap } from 'rxjs/operators';
 import { Movie } from '../model/interface';
-
 
 
 @Injectable({
@@ -16,23 +15,21 @@ export class FilmsService {
 
   }
 
-  loadAllLessons(): Observable<any> {
-    return this.http.get<any>('/api/films')
+  _fetchAllMovies(): Observable<any> {
+    return this.http.get<any>('https://azure-storage-api.azurewebsites.net/api/blob/FILMS')
       .pipe(
-        map(res => res.lessons)
+        tap(data => console.log(data, "--->")),
+        map(res => res.ALLFILMS), 
+        shareReplay(1)
       )
   }
 
-  findLessonById(id: number) {
-    return this.http.get<any>('/api/films/')
+  _fetchMovieById(id: string) {
+    return this._fetchAllMovies()
     .pipe(
-      tap(data => console.log(data.lessons, id )),
-      map(  
-        
-        data => data.lessons.filter(data => data.id === id)
-      
-      ), 
-    )
+      map(data =>  data.filter(film => film.id === Number(id))),
+      tap((data) => console.log(data)),
+      )
   }
 
   wikimedia(searText: string | any) {
