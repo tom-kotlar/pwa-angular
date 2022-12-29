@@ -1,29 +1,44 @@
-<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px"  style="padding-top: 10px;">
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px" style="padding-top: 10px;">
     <button mat-raised-button (click)="subscribeToNotifications()" [disabled]='sub'>Subscribe</button>
     <button mat-raised-button (click)="sendNewsletter()">Send</button>
 </div>
 
-<ng-container *ngIf="isWideScreen$ | async as screen">
+<!-- <ng-container *ngIf="isWideScreen$ | async as screen">
     <p> {{screen}} </p>
-</ng-container>
+</ng-container> -->
 
 <div class="home" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5px"
     fxLayoutGap.gt-md="10px">
 
+    <ng-container *ngIf="getAllMovies$  | async as allMovies; else noData">
 
-<ng-container  *ngFor="let movie of films$ | async">
-<mat-card class="example-card mat-elevation-z2" [title]="movie.id + 'details'" [routerLink]="['/movie', movie.id ]"> 
-        <img src="{{movie.poster}}" width="400" class="poster-width">
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-header>
-            <div mat-card-avatar class="image-logo"></div>
-            <mat-card-title >{{movie.title}}</mat-card-title>
-            <mat-card-subtitle >{{movie.name}}</mat-card-subtitle>
-        </mat-card-header>
+        <ng-container *ngFor="let movie of allMovies">
 
-    </mat-card>
+            <mat-card class="example-card mat-elevation-z2" [title]="movie.id + 'details'"
+                [routerLink]="['/movie', movie.id ]">
+                <img src="{{movie.poster}}" width="400" class="poster-width">
+                <mat-card-content>
+                </mat-card-content>
+                <mat-card-header>
+                    <div mat-card-avatar class="image-logo"></div>
+                    <mat-card-title>{{movie.title}}</mat-card-title>
+                    <mat-card-subtitle>{{movie.name}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
 
-</ng-container>
+        </ng-container>
+    </ng-container>
 
-</div> 
+</div>
+
+<ng-template #noData>
+    <div
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
+      fxLayoutGap="80px"
+      style="margin-top: 80px"
+    >
+      <h2>No Data Available...</h2>
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template> 

@@ -19,7 +19,7 @@ export class MoviesComponent implements OnInit {
   'BO2LO73vl7KzPHoGTDkOYeSLXZIAi78jVff5vG5QSK31PJjeDj06GK8LwzIH7Du_ESa9Ya0Xg_QAN4RA9ZSFCMw';
 
 sub: PushSubscription;
-films$: Observable<Movie[]>;
+// films$: Observable<Movie[]>;
 
 isWideScreen$: Observable<boolean>;
 
@@ -31,17 +31,21 @@ constructor(
 ) {}
 
 ngOnInit(): void {
-  this.loadFilms();
+  // this.loadFilms();
   this.isWideScreen$ = this.breakpointObserver
     .observe([Breakpoints.HandsetPortrait])
     .pipe(map(({ matches }: any) => matches));
 }
 
-loadFilms() {
-  this.films$ = this.filmsService
-    .loadAllLessons()
-    .pipe(catchError((err) => of([])));
-}
+// loadFilms() {
+//   this.films$ = this.filmsService
+//     .loadAllLessons()
+//     .pipe(catchError((err) => of([])));
+// }
+
+getAllMovies$ = this.filmsService
+._fetchAllMovies()
+.pipe(catchError((err) => of([])));
 
 subscribeToNotifications() {
   this.swPush
