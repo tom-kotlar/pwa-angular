@@ -1,36 +1,28 @@
-<!-- <div
-  *ngIf="films$ | async as film; else noData"
-  fxLayout="column"
-  fxLayoutAlign="space-around center"
-  style="font-size: calc(0.75em + 1vmin)"
-> -->
-  <!-- <h1>Star Wars</h1>
-  <img
-    height="900px"
-    src="https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
-    alt="new hope poster"
-  />
-  <h4>{{ films.title }}</h4>
-  <p>{{ films.opening_crawl }}</p>
-  <h4>{{ films.director }}</h4>
-  <h4>{{ films.producer }}</h4>
-  <h4>{{ films.release_date }}</h4>
+<ng-container *ngIf="films$ | async as film; else noData">
 
-   -->
+  <ng-container *ngFor="let movie of film">
 
-<!-- {{ film | json}}
-</div> -->
+    <div fxLayout="column" fxLayoutAlign="center center" style="padding-top: 60px">
+      <iframe width="80%" height="500" class="responsive-iframe" [src]="movie.trailer | sanitizer"
+        title="YouTube video player" scrolling="no" id="inneriframe" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-<h1 style="font-size: calc(0.95em + 1vmin)">Star Wars</h1>
+    <h1 style="font-size: calc(1.95em + 1vmin)"> {{movie.name}}</h1>
+
+    <img src="{{movie.poster}}" width="400" class="poster-width"> 
+    
+  </ng-container>
+
+
+</ng-container>
+
 
 <ng-template #noData>
-  <div
-    fxLayout="column"
-    fxLayoutAlign="space-around center"
-    fxLayoutGap="80px"
-    style="margin-top: 80px"
-  >
+  <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="80px" style="margin-top: 80px">
     <h2>No Data Available...</h2>
     <mat-spinner></mat-spinner>
   </div>
-</ng-template> 
+</ng-template>
