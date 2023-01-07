@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { map, shareReplay, tap } from 'rxjs/operators';
+import { Observable, of } from "rxjs";
+import { catchError, map, shareReplay, tap } from 'rxjs/operators';
 import { Movie } from '../model/interface';
 
 
@@ -10,16 +10,20 @@ import { Movie } from '../model/interface';
 })
 export class FilmsService {
 
-  wikiURL = "https://en.wikipedia.org/w/api.php"
-  constructor(private http: HttpClient) {
+  private azureApi =' https://azure-storage-api.azurewebsites.net/api/blob/FILMS'
 
-  }
+  private starWarsUrl = 'https://swapi.dev/api/films/?search=';
+
+  private wikiURL = "https://en.wikipedia.org/w/api.php"
+
+  constructor(private http: HttpClient) { }
 
   _fetchAllMovies(): Observable<any> {
-    return this.http.get<any>('https://azure-storage-api.azurewebsites.net/api/blob/FILMS')
+    return this.http.get<any>(this.azureApi)
       .pipe(
         tap(data => console.log(data, "--->")),
         map(res => res.ALLFILMS), 
+        catchError((err) => of([])),
         shareReplay(1)
       )
   }
@@ -29,6 +33,25 @@ export class FilmsService {
     .pipe(
       map(data =>  data.filter(film => film.id === Number(id))),
       tap((data) => console.log(data)),
+      )
+  }
+
+  _fetchSWAPIMovie(url): Observable<any> {
+    return this.http.get<any>(`${this.starWarsUrl}${url}&format=json`)
+    .pipe(
+      tap(data => console.log(data, "SWAPI")),
+      map(data =>  data.results),
+      tap(data => console.log(data, "SW")),
+      )
+  }
+
+
+  _fetchSWAPICharacters(url): Observable<any> {
+    return this.http.get<any>(`${url}`)
+    .pipe(
+      tap(data => console.log(data, "SWAPICHARACTERS")),
+      // map(data =>  data.results),
+      // tap(data => console.log(data, "SW")),
       )
   }
 
