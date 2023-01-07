@@ -18,6 +18,7 @@ export class FilmComponent implements OnInit {
   totalResults: any;
   page: number = 1;
 
+  one 
   constructor(private http: HttpClient, private filmsService: FilmsService) {}
 
   ngOnInit(): void {
@@ -28,12 +29,13 @@ export class FilmComponent implements OnInit {
 
   fetchCharacters() {
     this.filmsService
-      .wikimedia('Star_Wars')
+      .wikimedia('Luke Skywalker')
       .subscribe((data: any) => {
         console.log(data, "-->");
         this.results = data.query.search;
-
+        console.log(this.results, "RESULT");
       this.totalResults = data.query.search.length;
+   
       });
   }
 

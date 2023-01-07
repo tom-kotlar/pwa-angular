@@ -10,15 +10,57 @@
       </iframe>
     </div>
 
-    <h1 style="font-size: calc(1.95em + 1vmin)"> {{movie.name}}</h1>
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" style="padding-top: 40px;">
+      
+<div>
+      <h1 style="font-size: calc(1.95em + 1vmin)"> {{movie.name}}</h1>
 
-    <img src="{{movie.poster}}" width="400" class="poster-width"> 
+      <h2 style="font-size: calc(1.35em + 1vmin)"> {{movie.title}}</h2>
+
+      <p> {{movie.title}} </p>
+
+      <p> {{movie.story}} </p>
+
+      <p> {{movie.year}} </p>
+
+      <p> {{movie.duration}} </p>
+
+      <p> {{movie.info}} </p>
+  
+</div>
+      
+      <img src="{{movie.poster}}" width="400" class="poster-width"> 
+  </div>
     
   </ng-container>
 
 
 </ng-container>
 
+
+<p>
+  {{swapiFilm | json}}
+</p>
+
+<div *ngIf="SWapi$ | async as swapi">
+  <ng-container *ngFor="let data of swapi">
+    <div>
+      <h1>
+        {{data.title}}
+      </h1>
+
+      <h4>
+        {{data.opening_crawl}}
+      </h4>
+
+     
+    </div>
+  </ng-container>
+</div>
+
+<div *ngFor="let data of charArr">
+  {{data.name}}
+</div>
 
 <ng-template #noData>
   <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="80px" style="margin-top: 80px">

@@ -1,18 +1,61 @@
-<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px" style="padding-top: 10px;">
+<!-- <ng-container *ngIf="isWideScreen$ | async as screen"> -->
+
+<div fxShow="true" fxHide.md fxHide.sm fxHide.xs fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.gt-sm="5px"
+    style="padding-top: 70px; margin-bottom: 20px;">
     <button mat-raised-button (click)="subscribeToNotifications()" [disabled]='sub'>Subscribe</button>
     <button mat-raised-button (click)="sendNewsletter()">Send</button>
+
+    <button mat-icon-button>
+        <mat-icon (click)="onColumnsChange(1)">view_list</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onColumnsChange(3)">
+        <mat-icon>view_module</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onColumnsChange(4)">
+        <mat-icon>view_comfy</mat-icon>
+    </button>
+    {{cols}}
+    <!-- {{screen}} -->
 </div>
 
-<!-- <ng-container *ngIf="isWideScreen$ | async as screen">
-    <p> {{screen}} </p>
-</ng-container> -->
 
-<div class="home" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5px"
+<mat-grid-list gutterSize="15" [cols]="cols" [rowHeight]="rowHeight" fxShow="true" fxHide.md fxHide.sm fxHide.xs>
+
+    <ng-container *ngIf="getAllMovies$  | async as allMovies; else noData">
+
+        <mat-grid-tile *ngFor="let movie of allMovies">
+
+
+            <mat-card style="max-width: 900px;" [title]="movie.id + 'details'" [routerLink]="['/movie', movie.id ]"
+                [fullWidthMode]="cols === 1">
+                <img src="{{movie.poster}}" class="poster-width" style="width: 100%;">
+                <mat-card-content>
+                </mat-card-content>
+                <mat-card-header>
+                    <div mat-card-avatar class="image-logo"></div>
+                    <mat-card-title>{{movie.title}}</mat-card-title>
+                    <mat-card-subtitle>{{movie.name}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+
+        </mat-grid-tile>
+    </ng-container>
+
+
+</mat-grid-list>
+
+
+
+<div class="home" [ngClass.sm]="{'smallScreen':true}" [ngClass.xs]="{'smallScreen':true}"></div>
+
+
+<div fxHide.lg fxHide.xl fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5px"
     fxLayoutGap.gt-md="10px">
 
     <ng-container *ngIf="getAllMovies$  | async as allMovies; else noData">
 
         <ng-container *ngFor="let movie of allMovies">
+
 
             <mat-card class="example-card mat-elevation-z2" [title]="movie.id + 'details'"
                 [routerLink]="['/movie', movie.id ]">
@@ -31,14 +74,12 @@
 
 </div>
 
+
+
+
 <ng-template #noData>
-    <div
-      fxLayout="column"
-      fxLayoutAlign="space-around center"
-      fxLayoutGap="80px"
-      style="margin-top: 80px"
-    >
-      <h2>No Data Available...</h2>
-      <mat-spinner></mat-spinner>
+    <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="80px" style="margin-top: 80px">
+        <h2>Loading Data...</h2>
+        <mat-spinner></mat-spinner>
     </div>
-  </ng-template> 
+</ng-template>

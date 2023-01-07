@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable, of, Subscription } from 'rxjs';
 import { catchError, map, shareReplay, tap,  } from 'rxjs/operators';
 import { FilmsService } from '../services/films.service';
@@ -31,10 +32,12 @@ interface Films {
 })
 export class MovieComponent implements OnInit {
   films$: Observable<any>
+  swapiFilm
+  SWapi$: Observable<any>
   id: any;
   movieData: Subscription
 // newId: any
-  private starWarsUrl = 'https://swapi.dev/api/films/1';
+  starWarsUrl = 'https://swapi.dev/api/films/?search=';
 
   trustedUrl: SafeUrl;
   dangerousVideoUrl!: string;
@@ -45,7 +48,7 @@ export class MovieComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private sanitizer: DomSanitizer
   ) {
-    // this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+   
     // this.newId  =  this.activeRoute.snapshot.params['id'];
 
    
@@ -60,59 +63,46 @@ export class MovieComponent implements OnInit {
       console.log(this.id, 'PARAMS ID >>>');
     });
 
-    // this.filmsService._fetchMovieById(this.id).subscribe((data: any) => {
-    //   this.dangerousVideoUrl = data.trailer
-    //   console.log(this.dangerousVideoUrl)
-    //   this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl )
-  
-  
-    //   })
+   
     
     this.films$ = this.filmsService._fetchMovieById(this.id)
-    // console.log(this.route.data, this.route.snapshot.params);
-//     this.films$.subscribe(data => {
-//     this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(data.trailer)
-// console.log(this.trustedUrl)
+    
+   
+   
 
-//     })
+  
+
+    this.films$.subscribe( (data: any) => data.map(value => {
+      // this.swapiFilm = value.name
+  
+      this.SWapi$ = this.filmsService._fetchSWAPIMovie(value.name)
+      this.SWapi$.subscribe(data =>data.map(value => value.characters.map(char => this.setDetails(char)))
+ 
+          
+        
+      )
+    
+  }))
+
+
+
   }
 
-  // films$  = this.filmsService._fetchAllMovies()
-  // .pipe(
-  //   map(data =>  data.filter(film => film.id === Number(this.id)))
-      
-  //     // filter((movie: any) => movie.id === this.id)
-  //     ,
-  //   tap((data) => console.log(data)),
-  //   )
-//  fetchMovie() {
-//     this.filmsService.loadAllLessons().subscribe(data => data.filter())
-  // .pipe(
-  //        tap((data) => console.log(data.id, "????")),
-  //       map(  
-        
-  //         (data: any) => data.filter((movie: any) => movie.id === 2)
-        
-  //       ), 
-        // tap((data) => console.log(data, this.id,"????")),
-  // .pipe(
-  //   map(data => data.filter(data => data.id === this.id)), 
-  //   tap(data => console.log(data, ">>>>")),
-  //  )
 
 
 
 
-// }
 
-  // fetchFilms() {
-  //   this.films$ = this.http.get<Films>(this.starWarsUrl).pipe(
-  //     tap((data) => console.log(data)),
-  //     catchError(this.handleError<Films>()),
-  //     shareReplay()
-  //   );
-  // }
+  
 
+
+charArr = []
+    setDetails(url) {
+     
+   this.filmsService._fetchSWAPICharacters(url).subscribe( data => this.charArr.push(data))
+    
+  
+  }
 
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -123,3 +113,8 @@ export class MovieComponent implements OnInit {
     };
   }
 }
+// https://github.com/akabab/starwars-api
+// https://github.com/alimehdiofficial/starwars-api-build
+
+// https://www.youtube.com/watch?v=ZIMo8JYXzMQ
+// https://akabab.github.io/starwars-api/api/all.json
