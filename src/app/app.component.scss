@@ -1,8 +1,17 @@
 mat-toolbar {
   width: 100%;
-  z-index: 100;
-  position: sticky;
-  top: 0;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 50px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }
 
 a {
@@ -17,10 +26,12 @@ a:hover {
 
 .nav-links {
   list-style: none;
-  // padding: 0px;
-  // margin: 0px;
 }
 
 .active-link {
   color: #4cd2e3;
+}
+
+nav {
+  margin-top: 50px;
 }
