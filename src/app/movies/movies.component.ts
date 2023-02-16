@@ -5,7 +5,7 @@ import { SwPush } from '@angular/service-worker';
 import { NewslaterService } from '../services/newslater.service';
 import { FilmsService } from '../services/films.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Movie } from '../model/interface';
+
 
 
 const ROWS_HEIGHT: { [id: number]: number } = { 1: 1200, 3: 880, 4: 600 };

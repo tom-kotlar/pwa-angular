@@ -5,7 +5,7 @@ import { Observable, of, Subscription } from 'rxjs';
 import { catchError, map, shareReplay, tap,  } from 'rxjs/operators';
 import { FilmsService } from '../services/films.service';
 import { ActivatedRoute } from '@angular/router';
-import { Movie } from "../model/interface";
+
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 interface Films {

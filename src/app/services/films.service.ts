@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { catchError, map, shareReplay, tap } from 'rxjs/operators';
-import { Movie } from '../model/interface';
+import { catchError, map, share, shareReplay, tap } from 'rxjs/operators';
+import { Movie } from '../models/interface.model';
+
 
 
 @Injectable({
@@ -20,12 +21,12 @@ export class FilmsService {
 
  
 
-  _fetchAllMovies$ = this.http.get<{ALLFILMS: Movie[]}>(this.azureApi)
+  _fetchAllMovies$ = this.http.get<{lessons: Movie[]}>('/api/films')
   .pipe(
     tap(data => console.log(data, "--->")),
-    map(res => res.ALLFILMS), 
+    map(res => res.lessons), 
     catchError((err) => of([])),
-    shareReplay(1)
+   share()
   )
 
 
