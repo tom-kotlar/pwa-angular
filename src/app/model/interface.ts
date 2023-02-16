@@ -1,14 +1,14 @@
 export interface Movie {
-    story: string;
-    title: string;
+    id: number;
     name: string;
+    title: string;
     year: string;
     duration: string;
-    poster: string;
     info: string;
+    poster: string;
+    story: string;
     trailer: string;
 }
-
 export interface Breakpoints {
     XSmall: string;
     Small: string;
@@ -25,4 +25,5 @@ export interface Breakpoints {
     TabletLandscape: string;
     WebLandscape: string;
 }
+
 

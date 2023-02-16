@@ -52,7 +52,7 @@ export class MoviesComponent implements OnInit {
   //     .pipe(catchError((err) => of([])));
   // }
 
-  getAllMovies$ = this.filmsService._fetchAllMovies()
+  getAllMovies$ = this.filmsService._fetchAllMovies$
 
 
   subscribeToNotifications() {

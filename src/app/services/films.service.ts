@@ -18,23 +18,26 @@ export class FilmsService {
 
   constructor(private http: HttpClient) { }
 
-  _fetchAllMovies(): Observable<any> {
-    return this.http.get<any>(this.azureApi)
-      .pipe(
-        tap(data => console.log(data, "--->")),
-        map(res => res.ALLFILMS), 
-        catchError((err) => of([])),
-        shareReplay(1)
-      )
-  }
+ 
 
-  _fetchMovieById(id: string) {
-    return this._fetchAllMovies()
+  _fetchAllMovies$ = this.http.get<{ALLFILMS: Movie[]}>(this.azureApi)
+  .pipe(
+    tap(data => console.log(data, "--->")),
+    map(res => res.ALLFILMS), 
+    catchError((err) => of([])),
+    shareReplay(1)
+  )
+
+
+  _fetchMovieById(id) {
+    return this._fetchAllMovies$
     .pipe(
-      map(data =>  data.filter(film => film.id === Number(id))),
+      map(data =>  data.filter((film: Movie) => film.id === Number(id))),
       tap((data) => console.log(data)),
       )
   }
+
+  
 
   _fetchSWAPIMovie(url): Observable<any> {
     return this.http.get<any>(`${this.starWarsUrl}${url}&format=json`)
